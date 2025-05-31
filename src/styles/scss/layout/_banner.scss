@@ -1,0 +1,140 @@
+.full-banner-img {
+  width: 100vw;
+  height: 100vw;
+  object-fit: cover;
+
+  &.strict-height {
+    max-height: 440px;
+  }
+
+  &.fix-height-lg {
+    height: 360px;
+  }
+
+  &.fix-height-sm {
+    height: 180px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 50vw;
+    height: auto;
+    max-height: 834px;
+
+    &.strict-height {
+      max-height: 834px;
+    }
+    &.fix-height-lg,
+    &.fix-height-sm {
+      height: auto;
+    }
+  }
+}
+
+.banner-title-area,
+.subscription-form {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.banner-title-area {
+  padding-top: map-get($spacers, 6);
+  padding-left: map-get($spacers, 6);
+
+  @include media-breakpoint-up(md) {
+    padding-top: map-get($spacers, 0);
+    top: 50%;
+    transform: translateY(-50%);
+  }
+
+  @include media-breakpoint-up(xxl) {
+    padding-left: map-get($spacers, c-8);
+  }
+}
+.main-title {
+  font-size: 52px;
+  font-weight: 900;
+  margin-bottom: map-get($spacers, 3);
+
+  @include media-breakpoint-up(lg) {
+    font-size: 80px;
+  }
+  @include media-breakpoint-up(xxl) {
+    font-size: 120px;
+  }
+}
+
+.sub-title {
+  font-size: map-get($font-sizes, 3);
+  font-weight: $font-weight-bold;
+}
+
+.banner-content {
+  margin-top: -160px;
+  position: relative;
+  z-index: 100;
+
+  @include media-breakpoint-between(md, xxl) {
+    margin-top: -80px;
+  }
+}
+
+.sub-content {
+  background-color: $white;
+  max-width: 1077px;
+  font-size: map-get($font-sizes, 4);
+  padding: map-get($spacers, 10) map-get($spacers, 6);
+
+  @include media-breakpoint-up(xxl) {
+    font-size: map-get($font-sizes, 3);
+    padding: map-get($spacers, c-8) map-get($spacers, 10);
+    transform: translateX(-80px);
+  }
+
+  .text-first-row {
+    margin-bottom: map-get($spacers, 2);
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 0;
+    }
+  }
+
+  .icon-area {
+    display: flex;
+    align-items: center;
+    li {
+      width: 44px;
+      height: 44px;
+      margin-right: map-get($spacers, 1);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    i {
+      color: $primary;
+    }
+  }
+}
+
+.subscription-form {
+  width: 100%;
+  height: 100%;
+  padding: map-get($spacers, 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media-breakpoint-up(xl) {
+    padding-inline: map-get($spacers, c-8);
+  }
+}
+
+.form-content {
+  max-width: 800px;
+  background-color: $white;
+  padding: map-get($spacers, 10) map-get($spacers, 6);
+
+  @include media-breakpoint-up(xl) {
+    padding: map-get($spacers, c-8);
+  }
+}

@@ -1,0 +1,8 @@
+.display-main-title {
+  font-size: map-get($display-font-sizes, 5);
+  font-weight: $font-weight-bold;
+
+  @include media-breakpoint-up(xl) {
+    font-size: map-get($display-font-sizes, 3);
+  }
+}
