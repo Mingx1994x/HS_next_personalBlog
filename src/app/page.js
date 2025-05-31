@@ -40,9 +40,15 @@ export default function Home() {
         這裡是首頁
       </h2>
       <section className="subscription">
-        <BannerImages heightStyle={'strict-height'}>
-          <Subscription />
-        </BannerImages>
+        <div className="d-flex flex-column flex-md-row">
+          <img src="/images/banner_3.jpg" className='full-banner-img' alt="banner_1_Alyse" />
+          <div className="full-banner-img semi-background" style={{
+            backgroundImage: 'url("/images/banner_2.jpg")'
+          }}>
+            <Subscription />
+          </div>
+
+        </div>
       </section>
       <button className="btn btn-warning">
         沒啥作用的按鈕

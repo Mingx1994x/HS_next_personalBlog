@@ -1,0 +1,22 @@
+.subscription-form {
+  width: 100%;
+  height: 100%;
+  padding: map-get($spacers, 3);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  @include media-breakpoint-up(xl) {
+    padding-inline: map-get($spacers, c-8);
+  }
+}
+
+.form-content {
+  max-width: 800px;
+  background-color: $white;
+  padding: map-get($spacers, 10) map-get($spacers, 6);
+
+  @include media-breakpoint-up(xxl) {
+    padding: map-get($spacers, c-8);
+  }
+}

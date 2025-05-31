@@ -10,4 +10,5 @@ export default function BannerImages({ children, heightStyle }) {
       </div>
     </div>
   )
+
 }
