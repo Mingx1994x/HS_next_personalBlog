@@ -1,4 +1,4 @@
-export default function Subscription() {
+export default function SubscriptionForm() {
   return (
     <form className="subscription-form">
       <div className="form-content">

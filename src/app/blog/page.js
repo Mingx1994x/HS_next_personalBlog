@@ -1,5 +1,5 @@
-import BannerImages from "@/components/BannerImages";
-import BannerTitle from "@/components/BannerTitle";
+import BannerImages from "@/components/banner/BannerImages";
+import BannerTitle from "@/components/banner/BannerTitle";
 
 export default function Blog() {
   return (
