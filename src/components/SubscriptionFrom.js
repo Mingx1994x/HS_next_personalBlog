@@ -2,7 +2,7 @@ export default function SubscriptionForm() {
   return (
     <form className="subscription-form">
       <div className="form-content">
-        <h3 className="display-main-title mb-4">訂閱電子報</h3>
+        <h2 className="display-main-title mb-4">訂閱電子報</h2>
         <p className="mb-6">立即訂閱，搶先掌握<span className="text-primary">前端 x 職涯</span>的獨家資訊！</p>
         <div className="d-flex flex-column">
           <input type="text" className="form-control border-0 bg-neutral mb-2" placeholder="請輸入您的大名" />
