@@ -1,8 +1,82 @@
+.section-spacing {
+  padding-block: map-get($spacers, c-6-2);
+
+  @include media-breakpoint-up(xl) {
+    padding-block: map-get($spacers, c-8);
+  }
+}
+
 .display-main-title {
   font-size: map-get($display-font-sizes, 5);
   font-weight: $font-weight-bold;
 
   @include media-breakpoint-up(xl) {
     font-size: map-get($display-font-sizes, 3);
+  }
+}
+
+.service {
+  &-content {
+    margin-bottom: map-get($spacers, 8);
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: map-get($spacers, c-6-2);
+    }
+  }
+  &-wrapper {
+    background-color: $white;
+    padding: map-get($spacers, 6);
+    position: relative;
+    &::before {
+      content: '';
+      width: 30px;
+      height: 2.5px;
+      background-color: $primary;
+      margin: 18.75px 5px;
+      position: absolute;
+      top: 24px;
+      left: 24px;
+    }
+
+    &.slide-left {
+      @include media-breakpoint-up(md) {
+        animation: slide-left 0.3s linear forwards;
+      }
+    }
+
+    &.slide-right {
+      @include media-breakpoint-up(md) {
+        animation: slide-right 0.3s linear forwards;
+      }
+    }
+
+    @include media-breakpoint-between(md, xl) {
+      padding: map-get($spacers, 4);
+    }
+  }
+
+  &-title {
+    font-size: map-get($font-sizes, 3);
+    font-weight: $font-weight-bold;
+    margin-top: map-get($spacers, 10);
+    margin-bottom: map-get($spacers, 2);
+  }
+}
+
+@keyframes slide-left {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-64px);
+  }
+}
+
+@keyframes slide-right {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(64px);
   }
 }

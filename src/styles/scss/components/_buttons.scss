@@ -1,3 +1,11 @@
 .pill-btn {
   border-radius: map-get($spacers, 10);
 }
+
+.circle-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: map-get($spacers, 10);
+  display: flex;
+  justify-content: center;
+}
