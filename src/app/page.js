@@ -35,6 +35,7 @@ export default function Home() {
   ]
   return (
     <>
+      {/* banner區塊 */}
       <BannerImages heightStyle={'fix-height-lg'}>
         <BannerTitle
           mainTitle={'Alyse Wang'}
@@ -43,6 +44,7 @@ export default function Home() {
       </BannerImages>
       <BannerInfo />
 
+      {/* 專業服務與方案區塊 */}
       <section className="section-spacing">
         <div className="container">
           <h2 className="display-main-title mb-8">專業服務與方案</h2>
@@ -62,8 +64,41 @@ export default function Home() {
           <div className="d-flex flex-column flex-md-row align-items-end align-items-md-center justify-content-md-end">
             <p className="fs-3 fw-bold mb-2 mb-md-0">聯繫我，取得更多資訊！</p>
             <button type="button" className="btn btn-lg circle-arrow-btn btn-outline-secondary">
-              <i class="bi bi-arrow-right"></i>
+              <i className="bi bi-arrow-right"></i>
             </button>
+          </div>
+        </div>
+      </section>
+
+      {/* 部落格精選 */}
+      <section className="section-spacing">
+        <div className="container">
+          <h2 className="display-main-title mb-6">部落格精選</h2>
+        </div>
+      </section>
+
+      {/* 職涯諮詢成功案例 */}
+      <section className="section-spacing">
+        <div className="container">
+          <h2 className="display-main-title mb-6 d-none d-md-block">職涯諮詢成功案例</h2>
+          <h2 className="display-main-title mb-6 d-md-none">職涯諮詢<br />成功案例</h2>
+          <div className="row">
+            <div className="col-md-7">
+              <div className="consult-img-album">
+                <img src="/images/consult_1.jpg" className="consult-img" alt="" />
+              </div>
+            </div>
+            <div className="col-md-5">
+              <div className="consult-card">
+                <div className="consult-wrapper slide-left-down mb-3 mb-md-0">
+                  <p className="consult-text-spacing">在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效<span className="text-primary">突破原有的舒適圈。</span></p>
+                </div>
+                <div className="consult-wrapper slide-up">
+                  <p className="consult-text-spacing mb-6">期待在下一個新機會中，我能與你一起攜手邁向更高峰！</p>
+                  <button type="button" className="btn btn-lg pill-btn btn-outline-primary fw-bold">立即預約諮詢</button>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

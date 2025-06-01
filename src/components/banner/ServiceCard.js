@@ -8,7 +8,7 @@ export default function ServiceCard({ cardData, isLastOne }) {
       </div>
       <div className={`col-md-5 ${isRowReverse ? 'ms-auto' : ''} d-flex align-items-center`}>
         <div className={`service-wrapper ${isRowReverse ? 'slide-right' : 'slide-left'}`}>
-          <h3 className="service-title">{title}</h3>
+          <h3 className="service-title mb-2">{title}</h3>
           <p>{content}</p>
         </div>
       </div>
