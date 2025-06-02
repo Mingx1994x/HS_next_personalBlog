@@ -7,7 +7,7 @@ export default function CaseCard({ cardData }) {
         <h3 className="case-card-title mb-auto">{title}</h3>
         <ul className="list-unstyled h-100">
           {lists.map((list, index) => (
-            <li className={`${index === lists.length - 1 ? '' : 'mb-2'}`} key={index}>
+            <li className={`text-secondary ${index === lists.length - 1 ? '' : 'mb-2'}`} key={index}>
               <i className="bi bi-check-square-fill text-primary me-2"></i>{list}
             </li>
           ))}
