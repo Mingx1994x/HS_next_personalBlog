@@ -183,6 +183,23 @@
   }
 }
 
+.flex-area {
+  display: flex;
+  flex-direction: column;
+  @include media-breakpoint-up(md) {
+    flex-direction: row;
+  }
+}
+
+.line-decoration-100 {
+  content: '';
+  width: 100%;
+  height: 1px;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
 .case {
   &-wrapper {
     background-color: $neutral-200;
@@ -190,12 +207,10 @@
   }
 
   &-flex-area {
-    display: flex;
-    flex-direction: column;
+    @extend .flex-area;
     gap: map-get($spacers, 6);
 
     @include media-breakpoint-up(md) {
-      flex-direction: row;
       gap: map-get($spacers, 0);
     }
   }
@@ -224,17 +239,43 @@
     gap: map-get($spacers, 2);
     position: relative;
     &::after {
-      content: '';
-      width: 100%;
-      height: 1px;
+      @extend .line-decoration-100;
       background-color: $secondary;
-      position: absolute;
-      bottom: 0;
-      left: 0;
     }
   }
 
   &-card-title {
     font-size: map-get($font-sizes, 4);
   }
+}
+
+.contact {
+  border-bottom: 1px solid $dark;
+
+  &-list {
+    position: relative;
+    &::after {
+      @extend .line-decoration-100;
+      background-color: $dark;
+    }
+  }
+  &-link {
+    font-size: map-get($font-sizes, 4);
+    padding-bottom: map-get($spacers, 4);
+    @extend .flex-area;
+    row-gap: map-get($spacers, 2);
+
+    @include media-breakpoint-up(md) {
+      font-size: map-get($font-sizes, 3);
+    }
+
+    &:hover {
+      background-color: $primary-100;
+    }
+  }
+
+  // &::after {
+  //   @extend .line-decoration-100;
+  //   background-color: $dark;
+  // }
 }

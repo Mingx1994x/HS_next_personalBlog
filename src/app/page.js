@@ -4,6 +4,7 @@ import BannerTitle from "@/components/banner/BannerTitle";
 import SubscriptionFrom from "@/components/SubscriptionFrom";
 import ServiceCard from "@/components/ServiceCard";
 import CaseCard from "@/components/CaseCard";
+import Footer from "@/components/Footer";
 // import Image from "next/image";
 export default function Home() {
 
@@ -137,6 +138,7 @@ export default function Home() {
         </div>
       </section>
 
+      {/* 訂閱電子報 */}
       <section className="subscription">
         <div className="d-flex flex-column flex-md-row">
           <img src="/images/banner_3.jpg" className='full-banner-img' alt="banner_1_Alyse" />
@@ -147,9 +149,102 @@ export default function Home() {
           </div>
         </div>
       </section>
-      <button className="btn btn-warning">
-        沒啥作用的按鈕
-      </button>
+
+      {/* 與我聯繫 */}
+      <section className="contact section-spacing">
+        <div className="container">
+          <h2 className="display-main-title mb-6">與我聯繫</h2>
+          <ul className="list-unstyled d-flex flex-column row-gap-6 row-gap-md-4">
+            <li className="contact-list">
+              <a href="mailto:alysewang@hexschool.com" className="contact-link flex-area">
+                <span className="me-0 me-md-4">alysewang@hexschool.com</span>
+                合作洽談
+                <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
+                  width: '24px',
+                  height: '24px'
+                }}></i>
+              </a>
+            </li>
+            <li className="contact-list">
+              <a href="#" className="contact-link flex-area align-items-md-center">
+                <div className="icon-area">
+                  <span className="icon-square">
+                    <i className="bi bi-youtube fs-4"></i>
+                  </span>
+                  <span className="mx-2">Youtube</span>
+                  <span>職涯諮詢室</span>
+                </div>
+                <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
+                  width: '24px',
+                  height: '24px'
+                }}></i>
+              </a>
+            </li>
+            <li className="contact-list">
+              <a href="#" className="contact-link flex-area align-items-md-center">
+                <div className="icon-area">
+                  <span className="icon-square">
+                    <i className="bi bi-broadcast-pin fs-4"></i>
+                  </span>
+                  <span className="mx-2">podcast</span>
+                  <span>職涯諮詢室</span>
+                </div>
+                <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
+                  width: '24px',
+                  height: '24px'
+                }}></i>
+              </a>
+            </li>
+            <li className="contact-list">
+              <a href="#" className="contact-link flex-area align-items-md-center">
+                <div className="icon-area">
+                  <span className="icon-square">
+                    <i className="bi bi-facebook fs-4"></i>
+                  </span>
+                  <span className="mx-2">Facebook</span>
+                  <span>前端社群</span>
+                </div>
+                <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
+                  width: '24px',
+                  height: '24px'
+                }}></i>
+              </a>
+            </li>
+            <li className="contact-list">
+              <a href="#" className="contact-link flex-area align-items-md-center">
+                <div className="icon-area">
+                  <span className="icon-square">
+                    <i className="bi bi-linkedin fs-4"></i>
+                  </span>
+                  <span className="mx-2">linkedin</span>
+                  <span>職涯交流</span>
+                </div>
+                <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
+                  width: '24px',
+                  height: '24px'
+                }}></i>
+              </a>
+            </li>
+            <li className="contact-list">
+              <a href="#" className="contact-link flex-area align-items-md-center">
+                <div className="icon-area">
+                  <span className="icon-square">
+                    <i className="bi bi-instagram fs-4"></i>
+                  </span>
+                  <span className="mx-2">Instagram</span>
+                  <span>日常分享</span>
+                </div>
+                <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
+                  width: '24px',
+                  height: '24px'
+                }}></i>
+              </a>
+            </li>
+
+          </ul>
+        </div>
+      </section>
+      <Footer />
     </>
   );
 }

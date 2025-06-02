@@ -1,0 +1,16 @@
+.icon-area {
+  display: flex;
+  align-items: center;
+
+  .icon-square {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  i {
+    color: $primary;
+  }
+}

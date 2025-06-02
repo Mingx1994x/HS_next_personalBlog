@@ -6,8 +6,11 @@
 
 @import '../../node_modules/bootstrap/scss/bootstrap';
 
+// base
+@import './scss/base/base';
 // component
 @import './scss/components/buttons';
+@import './scss/components/iconLink';
 // layout
 @import './scss/layout/navLink';
 @import './scss/layout/banner';

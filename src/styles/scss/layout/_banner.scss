@@ -98,21 +98,4 @@
       margin-bottom: 0;
     }
   }
-
-  .icon-area {
-    display: flex;
-    align-items: center;
-    li {
-      width: 44px;
-      height: 44px;
-      margin-right: map-get($spacers, 1);
-      display: flex;
-      justify-content: center;
-      align-items: center;
-    }
-
-    i {
-      color: $primary;
-    }
-  }
 }
