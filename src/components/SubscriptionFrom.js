@@ -8,7 +8,7 @@ export default function SubscriptionForm() {
           <input type="text" className="form-control border-0 bg-neutral mb-2" placeholder="請輸入您的大名" />
           <input type="text" className="form-control border-0 bg-neutral mb-6" placeholder="請輸入您的電子信箱" />
           <div>
-            <button type="button" className="btn btn-lg pill-btn btn-outline-primary fw-bold">啟動訂閱</button>
+            <button type="button" className="btn pill btn-outline-primary fw-bold">啟動訂閱</button>
           </div>
         </div>
       </div>

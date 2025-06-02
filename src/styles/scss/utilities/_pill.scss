@@ -1,0 +1,10 @@
+.pill {
+  padding: map-get($spacers, 2) map-get($spacers, 4);
+  // border: 1px;
+  border-radius: map-get($spacers, 10);
+
+  &-sm {
+    padding: 6px map-get($spacers, 3);
+    border-radius: map-get($spacers, 10);
+  }
+}

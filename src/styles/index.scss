@@ -8,9 +8,14 @@
 
 // base
 @import './scss/base/base';
+// utilities
+@import './scss/utilities/pill';
+@import './scss/utilities/text';
 // component
 @import './scss/components/buttons';
 @import './scss/components/iconLink';
+@import './scss/components/card';
+@import './scss/components/tag';
 // layout
 @import './scss/layout/navLink';
 @import './scss/layout/banner';

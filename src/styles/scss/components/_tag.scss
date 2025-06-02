@@ -1,0 +1,8 @@
+.tag {
+  font-weight: $font-weight-bold;
+
+  &-primary {
+    color: $white;
+    background-color: $primary;
+  }
+}

@@ -390,7 +390,9 @@ $enable-grid-classes: true !default;
 $enable-container-classes: true !default;
 $enable-cssgrid: false !default;
 $enable-button-pointers: true !default;
-$enable-rfs: true !default;
+// custom
+$enable-rfs: false !default;
+// $enable-rfs: true !default;
 $enable-validation-icons: true !default;
 $enable-negative-margins: false !default;
 $enable-deprecation-messages: true !default;
@@ -691,7 +693,8 @@ $headings-font-style: null !default;
 // $headings-font-weight: 500 !default;
 // custom
 $headings-font-weight: $font-weight-bold !default;
-$headings-line-height: 1.2 !default;
+// $headings-line-height: 1.2 !default;
+$headings-line-height: 1.5 !default;
 $headings-color: inherit !default;
 // scss-docs-end headings-variables
 

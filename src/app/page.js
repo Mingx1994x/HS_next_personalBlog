@@ -98,6 +98,25 @@ export default function Home() {
       <section className="section-spacing">
         <div className="container">
           <h2 className="display-main-title mb-6">部落格精選</h2>
+          <div className="row">
+            <div className="col-sm-2 col-lg-4">
+              <div className="rect-card">
+                <img src="/images/blog_1.jpg" className="rect-card-img" alt="" />
+                <div className="rect-card-content">
+                  <div className="mb-4">
+                    <p className="mb-1">2024/10/21</p>
+                    <div className="rect-card-tag d-flex">
+                      <p className="text-primary fs-4 me-2">#前端開發 #職涯成長</p>
+                      <p className="tag pill-sm tag-primary">最新文章</p>
+                    </div>
+                    <h3 className="rect-card-title mb-2">自學前端不用怕：從零開始的三大關鍵</h3>
+                    <p className="text-secondary multi-line-truncate mb-2">嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！</p>
+                  </div>
+                  <button type="button" className="btn btn-lg pill-btn btn-outline-secondary">閱讀內文</button>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </section>
 
