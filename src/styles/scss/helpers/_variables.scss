@@ -312,6 +312,7 @@ $primary-100: #b2bef2 !default;
 $secondary: #4b4b4b !default;
 $neutral: #f1f1f1 !default;
 $neutral-100: #ededed !default;
+$neutral-200: #f5f5f5 !default;
 
 // scss-docs-end theme-color-variables
 
@@ -327,6 +328,7 @@ $theme-colors: (
   'light': $light,
   'neutral': $neutral,
   'neutral-100': $neutral-100,
+  'neutral-200': $neutral-200,
   'dark': $dark,
 ) !default;
 // scss-docs-end theme-colors-map
@@ -686,7 +688,9 @@ $headings-margin-bottom: 0 !default;
 // $headings-margin-bottom: $spacer * 0.5 !default;
 $headings-font-family: null !default;
 $headings-font-style: null !default;
-$headings-font-weight: 500 !default;
+// $headings-font-weight: 500 !default;
+// custom
+$headings-font-weight: $font-weight-bold !default;
 $headings-line-height: 1.2 !default;
 $headings-color: inherit !default;
 // scss-docs-end headings-variables

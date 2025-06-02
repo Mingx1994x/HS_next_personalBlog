@@ -2,9 +2,9 @@ import BannerInfo from "@/components/banner/BannerInfo";
 import BannerImages from "@/components/banner/BannerImages";
 import BannerTitle from "@/components/banner/BannerTitle";
 import SubscriptionFrom from "@/components/SubscriptionFrom";
-import ServiceCard from "@/components/banner/ServiceCard";
+import ServiceCard from "@/components/ServiceCard";
+import CaseCard from "@/components/CaseCard";
 // import Image from "next/image";
-
 export default function Home() {
 
   const serviceCardsData = [
@@ -32,7 +32,30 @@ export default function Home() {
       content: '想讓團隊快速掌握前端最新技術或優化現有專案流程？我可協助打造專業、實用的企業內訓課程，一次解決團隊痛點。',
       isRowReverse: true
     }
-  ]
+  ];
+
+  const caseCardsData = [
+    {
+      imgName: 'consult_avatar_1.jpg',
+      title: '無經驗到前端工程師 Offer',
+      lists: ['打造前端專案與履歷亮點', '深度強化面試表現']
+    },
+    {
+      imgName: 'consult_avatar_2.jpg',
+      title: '轉職迷茫到明確學習規劃',
+      lists: ['制訂階段性目標與時間安排', '鼓勵參與前端社群或活動']
+    },
+    {
+      imgName: 'consult_avatar_3.jpg',
+      title: '面試緊張到從容應對',
+      lists: ['透過面試模擬找出常犯的邏輯漏洞', '討論遇到不熟悉議題時的回應方式']
+    },
+    {
+      imgName: 'consult_avatar_4.jpg',
+      title: '面試緊張到從容應對',
+      lists: ['擬定進階框架或技術研究目標', '培養跨團隊溝通與簡報能力']
+    }
+  ];
   return (
     <>
       {/* banner區塊 */}
@@ -82,7 +105,7 @@ export default function Home() {
         <div className="container">
           <h2 className="display-main-title mb-6 d-none d-md-block">職涯諮詢成功案例</h2>
           <h2 className="display-main-title mb-6 d-md-none">職涯諮詢<br />成功案例</h2>
-          <div className="row">
+          <div className="row mb-10">
             <div className="col-md-7">
               <div className="consult-img-album">
                 <img src="/images/consult_1.jpg" className="consult-img" alt="" />
@@ -90,14 +113,25 @@ export default function Home() {
             </div>
             <div className="col-md-5">
               <div className="consult-card">
-                <div className="consult-wrapper slide-left-down mb-3 mb-md-0">
+                <div className="consult-wrapper slide-left-down">
                   <p className="consult-text-spacing">在職涯發展的關鍵轉折點上，適時的協助與正確的方向至關重要。藉由職涯諮詢，我可以幫助你加速釐清目標、建立更全面的技術與軟實力，並有效<span className="text-primary">突破原有的舒適圈。</span></p>
                 </div>
-                <div className="consult-wrapper slide-up">
+                <div className="consult-wrapper bg-neutral-200 slide-up">
                   <p className="consult-text-spacing mb-6">期待在下一個新機會中，我能與你一起攜手邁向更高峰！</p>
                   <button type="button" className="btn btn-lg pill-btn btn-outline-primary fw-bold">立即預約諮詢</button>
                 </div>
               </div>
+            </div>
+          </div>
+          <div className="case-wrapper">
+            <div className="row case-flex-area">
+              {caseCardsData.map((data, index) => (
+                <CaseCard
+                  key={index}
+                  cardData={data}
+                />
+              )
+              )}
             </div>
           </div>
         </div>
