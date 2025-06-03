@@ -1,8 +1,8 @@
 .rect-card {
-  height: 476px;
+  height: 100%;
   display: flex;
   flex-direction: column;
-  row-gap: map-get($spacers, 4);
+  // row-gap: map-get($spacers, 4);
 
   &-img {
     width: 100%;
@@ -11,8 +11,22 @@
   }
 
   &-content {
-    height: 100%;
     flex-grow: 1;
-    // display: flex;
+    display: flex;
+    flex-direction: column;
+  }
+
+  &-tag {
+    font-size: map-get($font-sizes, 4);
+    @include media-breakpoint-between(md, xxl) {
+      font-size: map-get($font-sizes, 5);
+    }
+  }
+
+  &-title {
+    font-size: map-get($font-sizes, 3);
+    @include media-breakpoint-between(md, xxl) {
+      font-size: map-get($font-sizes, 4);
+    }
   }
 }

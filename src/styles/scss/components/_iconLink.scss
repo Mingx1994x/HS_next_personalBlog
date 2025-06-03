@@ -1,16 +1,18 @@
-.icon-area {
-  display: flex;
-  align-items: center;
+.icon {
+  &-area {
+    display: flex;
+    align-items: center;
 
-  .icon-square {
+    .bi {
+      color: $primary;
+      font-size: map-get($font-sizes, 4);
+    }
+  }
+  &-square {
     width: 44px;
     height: 44px;
     display: flex;
     justify-content: center;
     align-items: center;
-  }
-
-  i {
-    color: $primary;
   }
 }
