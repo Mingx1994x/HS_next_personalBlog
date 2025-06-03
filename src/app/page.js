@@ -1,3 +1,5 @@
+// import Image from "next/image";
+
 import BannerInfo from "@/components/banner/BannerInfo";
 import BannerImages from "@/components/banner/BannerImages";
 import BannerTitle from "@/components/banner/BannerTitle";
@@ -5,7 +7,8 @@ import SubscriptionFrom from "@/components/SubscriptionFrom";
 import ServiceCard from "@/components/ServiceCard";
 import CaseCard from "@/components/CaseCard";
 import Footer from "@/components/Footer";
-// import Image from "next/image";
+import SelectBlogs from "@/components/SelectBlogs";
+
 export default function Home() {
 
   const serviceCardsData = [
@@ -57,6 +60,49 @@ export default function Home() {
       lists: ['擬定進階框架或技術研究目標', '培養跨團隊溝通與簡報能力']
     }
   ];
+
+  const selectBlogsData = [
+    {
+      "id": 0,
+      "date": "2024/10/21",
+      "images": {
+        "mobile": "https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/mobile/blog-content/About%20Section.png",
+        "desktop": "https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/blog-content/About%20Section.png"
+      },
+      "tags": ["#前端開發", "#職涯成長"],
+      "statusTag": "最新文章",
+      "title": "自學前端不用怕：從零開始的三大關鍵",
+      "content": "嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！",
+      "isPopular": false
+    },
+    {
+      "id": 5,
+      "date": "2024/07/08",
+      "images": {
+        "mobile": "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog/photo4.png?raw=true",
+        "desktop": "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo3.png?raw=true"
+      },
+      "tags": ["#面試準備", "#工程師求職"],
+      "statusTag": "人氣文章",
+      "title": "前端面試不再慌：破解常見提問的三大策略",
+      "content": "面試前端工程師時，你或許擔心被問到各種刁鑽的技術題目，或是擔憂無法在短時間內展現實力。其實，許多面試官關注的重點並不僅是程式碼本身，更包含問題解決的流程與溝通能力。這篇文章將分享我在面試過程中常見的三大難題，以及如何以更具條理的方式回應，讓你在面試場合中脫穎而出。",
+      "isPopular": true
+    },
+    {
+      "id": 3,
+      "date": "2024/09/03",
+      "images": {
+        "mobile": "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/mobile/blog/photo2.png?raw=true",
+        "desktop": "https://github.com/hexschool/2022-web-layout-training/blob/main/2025-web-camp/desktop/blog/photo2.png?raw=true"
+      },
+      "tags": ["#CSS設計", "#視覺體驗"],
+      "statusTag": "",
+      "title": "CSS 魔法大揭密：排版與設計的三大關鍵技巧",
+      "content": "在瀏覽器畫面上實現各種精美介面，一直是前端開發充滿成就感的部分。但當面臨複雜的佈局需求或是響應式設計時，往往讓人抓破頭皮。這篇文章想跟大家分享我在實務專案中累積的三大技巧，幫助你更有效率地駕馭 CSS，打造兼具美感與功能性的網頁。",
+      "isPopular": false
+    },
+
+  ]
   return (
     <>
       {/* banner區塊 */}
@@ -95,33 +141,15 @@ export default function Home() {
       </section>
 
       {/* 部落格精選 */}
-      <section className="section-spacing">
+      <section className="blogSelect section-spacing">
         <div className="container">
           <h2 className="display-main-title mb-6">部落格精選</h2>
-          <div className="row">
-            <div className="col-sm-2 col-lg-4">
-              <div className="rect-card">
-                <img src="/images/blog_1.jpg" className="rect-card-img" alt="" />
-                <div className="rect-card-content">
-                  <div className="mb-4">
-                    <p className="mb-1">2024/10/21</p>
-                    <div className="rect-card-tag d-flex">
-                      <p className="text-primary fs-4 me-2">#前端開發 #職涯成長</p>
-                      <p className="tag pill-sm tag-primary">最新文章</p>
-                    </div>
-                    <h3 className="rect-card-title mb-2">自學前端不用怕：從零開始的三大關鍵</h3>
-                    <p className="text-secondary multi-line-truncate mb-2">嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！</p>
-                  </div>
-                  <button type="button" className="btn btn-lg pill-btn btn-outline-secondary">閱讀內文</button>
-                </div>
-              </div>
-            </div>
-          </div>
+          <SelectBlogs />
         </div>
-      </section>
+      </section >
 
       {/* 職涯諮詢成功案例 */}
-      <section className="section-spacing">
+      <section className="section-spacing" >
         <div className="container">
           <h2 className="display-main-title mb-6 d-none d-md-block">職涯諮詢成功案例</h2>
           <h2 className="display-main-title mb-6 d-md-none">職涯諮詢<br />成功案例</h2>
@@ -159,7 +187,7 @@ export default function Home() {
       </section>
 
       {/* 訂閱電子報 */}
-      <section className="subscription">
+      <section className="subscription" >
         <div className="d-flex flex-column flex-md-row">
           <img src="/images/banner_3.jpg" className='full-banner-img' alt="banner_1_Alyse" />
           <div className="full-banner-img semi-background" style={{
@@ -171,7 +199,7 @@ export default function Home() {
       </section>
 
       {/* 與我聯繫 */}
-      <section className="contact section-spacing">
+      <section className="contact section-spacing" >
         <div className="container">
           <h2 className="display-main-title mb-6">與我聯繫</h2>
           <ul className="list-unstyled d-flex flex-column row-gap-6 row-gap-md-4">

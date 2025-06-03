@@ -1,5 +1,5 @@
 // bootstrap icon
-@import url('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css');
+@import '../../node_modules/bootstrap-icons/font/bootstrap-icons.scss';
 
 @import '../../node_modules/bootstrap/scss/functions';
 @import './scss/helpers/variables';
@@ -16,6 +16,7 @@
 @import './scss/components/iconLink';
 @import './scss/components/card';
 @import './scss/components/tag';
+@import './scss/components/swiperNavigation';
 // layout
 @import './scss/layout/navLink';
 @import './scss/layout/banner';
