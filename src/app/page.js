@@ -146,10 +146,11 @@ export default function Home() {
           <div className="case-wrapper">
             <div className="row case-flex-area">
               {caseCardsData.map((data, index) => (
-                <CaseCard
-                  key={index}
-                  cardData={data}
-                />
+                <div className="col-md-3" key={index}>
+                  <CaseCard
+                    cardData={data}
+                  />
+                </div>
               )
               )}
             </div>
@@ -176,8 +177,10 @@ export default function Home() {
           <ul className="list-unstyled d-flex flex-column row-gap-6 row-gap-md-4">
             <li className="contact-list">
               <a href="mailto:alysewang@hexschool.com" className="contact-link flex-area">
-                <span className="me-0 me-md-4">alysewang@hexschool.com</span>
-                合作洽談
+                <p className="text-slide">
+                  <span className="text-decoration-underline me-0 me-md-4">alysewang@hexschool.com</span>
+                  合作洽談
+                </p>
                 <i className="bi bi-arrow-right fs-4 ms-0 ms-md-auto" style={{
                   width: '24px',
                   height: '24px'
@@ -186,7 +189,7 @@ export default function Home() {
             </li>
             <li className="contact-list">
               <a href="#" className="contact-link flex-area align-items-md-center">
-                <div className="icon-area">
+                <div className="icon-area text-slide">
                   <span className="icon-square">
                     <i className="bi bi-youtube fs-4"></i>
                   </span>
@@ -201,7 +204,7 @@ export default function Home() {
             </li>
             <li className="contact-list">
               <a href="#" className="contact-link flex-area align-items-md-center">
-                <div className="icon-area">
+                <div className="icon-area text-slide">
                   <span className="icon-square">
                     <i className="bi bi-broadcast-pin fs-4"></i>
                   </span>
@@ -216,7 +219,7 @@ export default function Home() {
             </li>
             <li className="contact-list">
               <a href="#" className="contact-link flex-area align-items-md-center">
-                <div className="icon-area">
+                <div className="icon-area text-slide">
                   <span className="icon-square">
                     <i className="bi bi-facebook fs-4"></i>
                   </span>
@@ -231,7 +234,7 @@ export default function Home() {
             </li>
             <li className="contact-list">
               <a href="#" className="contact-link flex-area align-items-md-center">
-                <div className="icon-area">
+                <div className="icon-area text-slide">
                   <span className="icon-square">
                     <i className="bi bi-linkedin fs-4"></i>
                   </span>
@@ -246,7 +249,7 @@ export default function Home() {
             </li>
             <li className="contact-list">
               <a href="#" className="contact-link flex-area align-items-md-center">
-                <div className="icon-area">
+                <div className="icon-area text-slide">
                   <span className="icon-square">
                     <i className="bi bi-instagram fs-4"></i>
                   </span>

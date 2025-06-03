@@ -219,6 +219,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
+    height: 100%;
     gap: map-get($spacers, 4);
   }
 
@@ -228,12 +229,9 @@
     object-fit: cover;
     object-position: 0 center;
     border-radius: 100%;
-    flex-shrink: 0;
   }
 
   &-card-content {
-    height: 100%;
-    flex-shrink: 1;
     display: flex;
     flex-direction: column;
     gap: map-get($spacers, 2);
@@ -258,6 +256,13 @@
       @extend .line-decoration-100;
       background-color: $dark;
     }
+
+    &:hover {
+      &::after {
+        height: 2.5px;
+        background-color: $primary;
+      }
+    }
   }
   &-link {
     font-size: map-get($font-sizes, 4);
@@ -270,12 +275,9 @@
     }
 
     &:hover {
-      background-color: $primary-100;
+      .text-slide {
+        animation: slide-right 0.3s ease-in forwards;
+      }
     }
   }
-
-  // &::after {
-  //   @extend .line-decoration-100;
-  //   background-color: $dark;
-  // }
 }
