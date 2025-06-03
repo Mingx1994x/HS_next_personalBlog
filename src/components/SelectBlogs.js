@@ -127,9 +127,7 @@ export default function SelectBlogs() {
           ))
         }
       </Swiper>
-      <div className='mt-8' style={{
-        height: '44px'
-      }}>
+      <div className='swiper-button-area'>
         <div className="swiper-button-prev" ref={buttonPrevRef}>
         </div>
         <div className="swiper-button-next" ref={buttonNextRef}>
