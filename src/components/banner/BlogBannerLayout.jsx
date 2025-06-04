@@ -4,9 +4,9 @@ export default function BlogBannerLayout({ blogData, hasContent }) {
   return (
     <section className="blog-banner">
       <picture>
-        <source srcSet={blogData.images.desktop} media="(max-width: 992px)" />
+        <source srcSet={blogData.images.mobile} media="(max-width: 992px)" />
         <img
-          src={blogData.images.mobile}
+          src={blogData.images.desktop}
           className="full-banner-img blog-sub-banner"
           alt={blogData.title}
         />

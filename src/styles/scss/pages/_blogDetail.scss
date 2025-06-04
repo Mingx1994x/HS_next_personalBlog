@@ -1,0 +1,29 @@
+.blog-detail {
+  display: flex;
+  flex-direction: column;
+  row-gap: map-get($spacers, 12);
+
+  &-title {
+    font-size: map-get($font-sizes, 3);
+    margin-bottom: map-get($spacers, 6);
+  }
+
+  &-subtitle {
+    font-size: map-get($font-sizes, 5);
+    margin-bottom: map-get($spacers, 3);
+  }
+
+  &-tip {
+    font-weight: $font-weight-bold;
+    padding: map-get($spacers, 6);
+    background-color: $neutral-100;
+    border-radius: map-get($spacers, 6);
+  }
+}
+
+.context {
+  ol,
+  ul {
+    padding-left: 24px;
+  }
+}
