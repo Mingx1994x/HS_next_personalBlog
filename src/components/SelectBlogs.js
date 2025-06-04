@@ -6,7 +6,7 @@ import { Navigation } from 'swiper/modules'
 import 'swiper/css';
 import 'swiper/css/navigation';
 
-import BlogCard from './BlogCard';
+import BlogCard from './rectCard/BlogCard';
 
 export default function SelectBlogs() {
 

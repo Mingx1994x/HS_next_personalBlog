@@ -27,7 +27,6 @@ export default function BlogCard({ cardData }) {
           <p className="text-secondary multi-line-truncate">{content}</p>
         </div>
         <div className="mt-auto">
-
           <button type="button" className="btn btn-lg pill btn-outline-secondary mt-auto">閱讀內文</button>
         </div>
       </div>

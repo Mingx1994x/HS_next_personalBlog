@@ -1,4 +1,4 @@
-export default function BannerImages({ children, heightStyle }) {
+export default function MainBannerLayout({ children, heightStyle }) {
   return (
     <section className="d-flex flex-column flex-md-row">
       <img src="/images/banner_1.jpg" className='full-banner-img' alt="banner_1_Alyse" />
@@ -10,5 +10,4 @@ export default function BannerImages({ children, heightStyle }) {
       </div>
     </section>
   )
-
 }

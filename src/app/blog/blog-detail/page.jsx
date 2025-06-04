@@ -1,29 +1,23 @@
-import MainBannerLayout from '@/components/banner/MainBannerLayout';
-import BannerTitle from '@/components/banner/BannerTitle';
-import BlogCard from '@/components/rectCard/BlogCard';
-import Footer from '@/components/Footer';
-import SocialIcons from '@/components/SocialIcons';
-import BlogCardContent from '@/components/rectCard/BlogCardContent';
 import BlogBannerLayout from '@/components/banner/BlogBannerLayout';
 
-export default function Blog() {
-  const latestBlogData = {
-    id: 0,
-    date: '2024/10/21',
-    images: {
-      mobile:
-        'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/mobile/blog-content/About%20Section.png',
-      desktop:
-        'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/blog-content/About%20Section.png',
-    },
-    tags: ['#前端開發', '#職涯成長'],
-    statusTag: '最新文章',
-    title: '自學前端不用怕：從零開始的三大關鍵',
-    content:
-      '嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！',
-    isPopular: false,
-  };
+export default function BlogDetail() {
   const blogsData = [
+    {
+      id: 0,
+      date: '2024/10/21',
+      images: {
+        mobile:
+          'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/mobile/blog-content/About%20Section.png',
+        desktop:
+          'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/blog-content/About%20Section.png',
+      },
+      tags: ['#前端開發', '#職涯成長'],
+      statusTag: '最新文章',
+      title: '自學前端不用怕：從零開始的三大關鍵',
+      content:
+        '嗨，我是 Alyse，一名前端工程師兼職涯諮詢師。一直以來，我都很喜歡在部落格分享學習與工作心得，也常有讀者問：「我想轉職/自學前端，該從哪裡開始？」其實自學的過程既自由又具挑戰性。我整理了三大關鍵，幫助你在短期內建立紮實基礎，並快速累積實戰經驗。希望能替你的前端之路帶來一些啟發與動力！',
+      isPopular: false,
+    },
     {
       id: 1,
       date: '2024/10/11',
@@ -201,62 +195,12 @@ export default function Blog() {
       isPopular: false,
     },
   ];
+
   return (
     <>
-      <MainBannerLayout heightStyle={'fix-height-sm'}>
-        <BannerTitle mainTitle={'BLOG'} subTitle={'前端工程師 & 職涯諮詢師'} />
-      </MainBannerLayout>
-      <BlogBannerLayout blogData={latestBlogData} />
-      <section className="section-spacing">
-        <div className="container">
-          <div className="row">
-            <div className="col-md-4">
-              <div className="search">
-                <input
-                  type="text"
-                  className="search-input form-control pill py-4"
-                  placeholder="搜尋你感興趣的文章"
-                />
-                <button type="button" className="btn search-btn border-0">
-                  <i className="bi bi-search fs-4 lh-1"></i>
-                </button>
-              </div>
-            </div>
-          </div>
-          <div className="row row-gap-8 row-gap-md-c-8 mb-10">
-            {blogsData.map((blog) => (
-              <div className="col-md-6 col-lg-4 h-auto" key={blog.id}>
-                <BlogCard cardData={blog} />
-              </div>
-            ))}
-          </div>
-          <div className="d-flex justify-content-center">
-            <ul className="pagination list-unstyled">
-              <li>
-                <i className="bi bi-chevron-left fs-4"></i>
-              </li>
-              <li className="current-page">1</li>
-              <li>2</li>
-              <li>3</li>
-              <li>4</li>
-              <li>5</li>
-              <li>...</li>
-              <li>
-                <i className="bi bi-chevron-right fs-4"></i>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </section>
-      <section className="section-spacing d-none d-md-block">
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center">
-            <p className="fs-2">alysewang@hexschool.com</p>
-            <SocialIcons />
-          </div>
-        </div>
-      </section>
-      <Footer />
+      <BlogBannerLayout blogData={blogsData[0]} hasContent={false} />
+
+      <section className="section-spacing"></section>
     </>
   );
 }

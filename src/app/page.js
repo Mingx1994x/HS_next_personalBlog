@@ -1,7 +1,7 @@
 // import Image from "next/image";
 
 import BannerInfo from "@/components/banner/BannerInfo";
-import BannerImages from "@/components/banner/BannerImages";
+import MainBannerLayout from "@/components/banner/MainBannerLayout";
 import BannerTitle from "@/components/banner/BannerTitle";
 import SubscriptionFrom from "@/components/SubscriptionFrom";
 import ServiceCard from "@/components/ServiceCard";
@@ -106,12 +106,12 @@ export default function Home() {
   return (
     <>
       {/* banner區塊 */}
-      <BannerImages heightStyle={'fix-height-lg'}>
+      <MainBannerLayout heightStyle={'fix-height-lg'}>
         <BannerTitle
           mainTitle={'Alyse Wang'}
           subTitle={'前端工程師 & 職涯諮詢師'}
         />
-      </BannerImages>
+      </MainBannerLayout>
       <BannerInfo />
 
       {/* 專業服務與方案區塊 */}

@@ -20,6 +20,10 @@
     &.fix-height-sm {
       height: auto;
     }
+
+    &.blog-sub-banner {
+      width: calc(50vw - 12px);
+    }
   }
 }
 
@@ -96,6 +100,19 @@
     margin-bottom: map-get($spacers, 2);
     @include media-breakpoint-up(lg) {
       margin-bottom: 0;
+    }
+  }
+}
+
+.blog-banner {
+  position: relative;
+
+  &-content {
+    @include media-breakpoint-up(md) {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
     }
   }
 }
