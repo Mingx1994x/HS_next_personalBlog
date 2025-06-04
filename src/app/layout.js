@@ -1,4 +1,5 @@
 import NavLink from "@/components/NavLink";
+import Footer from "@/components/Footer";
 import "@/styles/index.scss";
 
 
@@ -13,6 +14,7 @@ export default function RootLayout({ children }) {
       <body>
         <NavLink />
         {children}
+        <Footer />
       </body>
     </html>
   );

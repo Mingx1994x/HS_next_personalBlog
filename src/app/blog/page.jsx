@@ -1,9 +1,6 @@
 import MainBannerLayout from '@/components/banner/MainBannerLayout';
 import BannerTitle from '@/components/banner/BannerTitle';
 import BlogCard from '@/components/rectCard/BlogCard';
-import Footer from '@/components/Footer';
-import SocialIcons from '@/components/SocialIcons';
-import BlogCardContent from '@/components/rectCard/BlogCardContent';
 import BlogBannerLayout from '@/components/banner/BlogBannerLayout';
 
 export default function Blog() {
@@ -248,15 +245,6 @@ export default function Blog() {
           </div>
         </div>
       </section>
-      <section className="section-spacing d-none d-md-block">
-        <div className="container">
-          <div className="d-flex justify-content-between align-items-center">
-            <p className="fs-2">alysewang@hexschool.com</p>
-            <SocialIcons />
-          </div>
-        </div>
-      </section>
-      <Footer />
     </>
   );
 }

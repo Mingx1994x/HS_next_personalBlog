@@ -294,7 +294,6 @@ export default function Home() {
           </ul>
         </div>
       </section>
-      <Footer />
     </>
   );
 }
