@@ -1,0 +1,28 @@
+.circle-arrow-btn {
+  width: 40px;
+  height: 40px;
+  border-radius: map-get($spacers, 10);
+  display: flex;
+  justify-content: center;
+}
+
+.search {
+  margin-bottom: map-get($spacers, 10);
+  position: relative;
+
+  &-input {
+    padding-left: 50px;
+
+    &::placeholder {
+      color: $secondary;
+    }
+  }
+
+  &-btn {
+    color: $secondary;
+    padding: map-get($spacers, 4);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+}

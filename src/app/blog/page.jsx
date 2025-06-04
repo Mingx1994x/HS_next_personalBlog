@@ -1,6 +1,7 @@
 import BannerImages from '@/components/banner/BannerImages';
 import BannerTitle from '@/components/banner/BannerTitle';
 import BlogCard from '@/components/BlogCard';
+import Footer from '@/components/Footer';
 import SocialIcons from '@/components/SocialIcons';
 
 export default function Blog() {
@@ -205,23 +206,54 @@ export default function Blog() {
       </BannerImages>
       <section className="section-spacing">
         <div className="container">
-          <div className="row row-gap-8 row-gap-md-10">
+          <div className="row">
+            <div className="col-md-4">
+              <div className="search">
+                <input
+                  type="text"
+                  className="search-input form-control pill py-4"
+                  placeholder="搜尋你感興趣的文章"
+                />
+                <button type="button" className="btn search-btn border-0">
+                  <i className="bi bi-search fs-4 lh-1"></i>
+                </button>
+              </div>
+            </div>
+          </div>
+          <div className="row row-gap-8 row-gap-md-c-8 mb-10">
             {BlogsData.map((blog) => (
               <div className="col-md-6 col-lg-4 h-auto" key={blog.id}>
                 <BlogCard cardData={blog} />
               </div>
             ))}
           </div>
+          <div className="d-flex justify-content-center">
+            <ul className="pagination list-unstyled">
+              <li>
+                <i className="bi bi-chevron-left fs-4"></i>
+              </li>
+              <li className="current-page">1</li>
+              <li>2</li>
+              <li>3</li>
+              <li>4</li>
+              <li>5</li>
+              <li>...</li>
+              <li>
+                <i className="bi bi-chevron-right fs-4"></i>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
       <section className="section-spacing d-none d-md-block">
         <div className="container">
-          <div className="d-flex justify-content-between">
+          <div className="d-flex justify-content-between align-items-center">
             <p className="fs-2">alysewang@hexschool.com</p>
             <SocialIcons />
           </div>
         </div>
       </section>
+      <Footer />
     </>
   );
 }
