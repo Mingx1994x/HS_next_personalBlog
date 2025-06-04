@@ -5,7 +5,7 @@ import BlogBannerLayout from '@/components/banner/BlogBannerLayout';
 
 export default function Blog() {
   const latestBlogData = {
-    id: 0,
+    id: '0',
     date: '2024/10/21',
     images: {
       mobile:
@@ -22,7 +22,7 @@ export default function Blog() {
   };
   const blogsData = [
     {
-      id: 1,
+      id: '1',
       date: '2024/10/11',
       images: {
         mobile:
@@ -38,7 +38,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 2,
+      id: '2',
       date: '2024/09/07',
       images: {
         mobile:
@@ -54,7 +54,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 3,
+      id: '3',
       date: '2024/09/03',
       images: {
         mobile:
@@ -70,7 +70,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 4,
+      id: '4',
       date: '2024/07/09',
       images: {
         mobile:
@@ -86,7 +86,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 5,
+      id: '5',
       date: '2024/07/08',
       images: {
         mobile:
@@ -102,7 +102,7 @@ export default function Blog() {
       isPopular: true,
     },
     {
-      id: 6,
+      id: '6',
       date: '2024/06/29',
       images: {
         mobile:
@@ -118,7 +118,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 7,
+      id: '7',
       date: '2024/05/04',
       images: {
         mobile:
@@ -134,7 +134,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 8,
+      id: '8',
       date: '2024/05/01',
       images: {
         mobile:
@@ -150,7 +150,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 9,
+      id: '9',
       date: '2024/02/17',
       images: {
         mobile:
@@ -166,7 +166,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 10,
+      id: '10',
       date: '2024/02/17',
       images: {
         mobile:
@@ -182,7 +182,7 @@ export default function Blog() {
       isPopular: false,
     },
     {
-      id: 11,
+      id: '11',
       date: '2024/02/07',
       images: {
         mobile:

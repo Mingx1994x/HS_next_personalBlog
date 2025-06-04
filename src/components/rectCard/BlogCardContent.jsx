@@ -1,4 +1,7 @@
+import Link from 'next/link';
+
 export default function BlogCardContent({
+  id,
   date,
   tags,
   statusTag,
@@ -30,12 +33,12 @@ export default function BlogCardContent({
         )}
       </div>
       <div className="mt-auto">
-        <button
-          type="button"
+        <Link
+          href={`/blog/${id}`}
           className="btn btn-lg pill btn-outline-secondary mt-auto"
         >
           閱讀內文
-        </button>
+        </Link>
       </div>
     </div>
   );

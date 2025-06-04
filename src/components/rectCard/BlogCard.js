@@ -1,5 +1,7 @@
+import Link from "next/link"
+
 export default function BlogCard({ cardData }) {
-  const { images, date, tags, statusTag, title, content } = cardData
+  const { id, images, date, tags, statusTag, title, content } = cardData
   return (
     <div className="rect-card">
       <picture className="mb-4">
@@ -27,7 +29,7 @@ export default function BlogCard({ cardData }) {
           <p className="text-secondary multi-line-truncate">{content}</p>
         </div>
         <div className="mt-auto">
-          <button type="button" className="btn btn-lg pill btn-outline-secondary mt-auto">閱讀內文</button>
+          <Link className="btn btn-lg pill btn-outline-secondary mt-auto" href={`/blog/${id}`}>閱讀內文</Link>
         </div>
       </div>
     </div>

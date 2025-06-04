@@ -16,6 +16,7 @@ export default function BlogBannerLayout({ blogData, hasContent }) {
           <div className="col-md-6">
             <div className="py-12 d-flex flex-column justify-content-center">
               <BlogCardContent
+                id={blogData.id}
                 date={blogData.date}
                 tags={blogData.tags}
                 statusTag={blogData.statusTag}

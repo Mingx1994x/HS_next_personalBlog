@@ -2,7 +2,7 @@ import BlogBannerLayout from '@/components/banner/BlogBannerLayout';
 import BlogDetailContext from '@/components/BlogDetailContext';
 
 export default async function BlogDetail({ params }) {
-  const blogId = await params.id;
+  const blogId = await params;
 
   const blogsDetailData = {
     0: {
@@ -260,7 +260,10 @@ export default async function BlogDetail({ params }) {
 
   return (
     <>
-      <BlogBannerLayout blogData={blogsDetailData[blogId]} hasContent={false} />
+      <BlogBannerLayout
+        blogData={blogsDetailData[blogId.id]}
+        hasContent={false}
+      />
 
       <div className="section-spacing">
         <div className="container">
