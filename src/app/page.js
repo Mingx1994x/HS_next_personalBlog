@@ -166,7 +166,7 @@ export default function Home() {
                 </div>
                 <div className="consult-wrapper bg-neutral-200 slide-up">
                   <p className="consult-text-spacing mb-6">期待在下一個新機會中，我能與你一起攜手邁向更高峰！</p>
-                  <button type="button" className="btn btn-lg pill-btn btn-outline-primary fw-bold">立即預約諮詢</button>
+                  <button type="button" className="btn btn-lg pill btn-outline-primary fw-bold">立即預約諮詢</button>
                 </div>
               </div>
             </div>

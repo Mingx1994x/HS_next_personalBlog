@@ -17,7 +17,7 @@ export default function CaseCard({ cardData }) {
         </ul>
       </div>
       <div className="flex-shrink-0">
-        <button type="button" className="btn btn-lg pill-btn btn-outline-secondary">前往聆聽 podcast</button>
+        <button type="button" className="btn btn-lg pill btn-outline-secondary">前往聆聽 podcast</button>
       </div>
     </div>
   )

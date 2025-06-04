@@ -1,6 +1,5 @@
 .pill {
   padding: map-get($spacers, 2) map-get($spacers, 4);
-  // border: 1px;
   border-radius: map-get($spacers, 10);
 
   &-sm {
