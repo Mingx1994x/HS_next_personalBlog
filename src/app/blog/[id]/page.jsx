@@ -265,8 +265,8 @@ export default async function BlogDetail({ params }) {
         hasContent={false}
       />
 
-      <div className="section-spacing">
-        <div className="container">
+      <div className="container">
+        <div className="section-spacing">
           <main className="row d-flex mb-12">
             <div className="col-xl-5 col-md-7 mx-auto blog-detail">
               {/* 前言 */}

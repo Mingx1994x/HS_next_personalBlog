@@ -9,8 +9,8 @@ export default function RootLayout({ children }) {
   return (
     <>
       {children}
-      <section className="section-spacing d-none d-md-block">
-        <div className="container">
+      <section className="container d-none d-md-block">
+        <div className="section-spacing">
           <div className="d-flex justify-content-between align-items-center">
             <p className="fs-2">alysewang@hexschool.com</p>
             <SocialIcons />

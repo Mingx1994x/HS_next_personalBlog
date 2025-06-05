@@ -204,8 +204,8 @@ export default function Blog() {
         <BannerTitle mainTitle={'BLOG'} subTitle={'前端工程師 & 職涯諮詢師'} />
       </MainBannerLayout>
       <BlogBannerLayout blogData={latestBlogData} />
-      <section className="section-spacing">
-        <div className="container">
+      <section className="container">
+        <div className="section-spacing">
           <div className="row">
             <div className="col-md-4">
               <div className="search">
