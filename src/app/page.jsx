@@ -8,6 +8,7 @@ import ServiceCard from '@/components/ServiceCard';
 import CaseCard from '@/components/CaseCard';
 import SelectBlogs from '@/components/SelectBlogs';
 
+import { bannerImagesUrl } from '@/data/blogData';
 export default function Home() {
   const serviceCardsData = [
     {
@@ -66,10 +67,12 @@ export default function Home() {
     },
   ];
 
+  const { leftSection, rightSection } = bannerImagesUrl;
+
   return (
     <>
       {/* banner區塊 */}
-      <MainBannerLayout>
+      <MainBannerLayout bannerData={leftSection[0]}>
         <BannerTitle
           mainTitle={'Alyse Wang'}
           subTitle={'前端工程師 & 職涯諮詢師'}
@@ -170,15 +173,15 @@ export default function Home() {
       </section>
 
       {/* 訂閱電子報 */}
-      <section className="subscription">
-        <div className="d-flex flex-column flex-md-row">
+      {/* <section className="subscription">
+        <div className="banner-section">
           <img
             src="/images/banner_3.jpg"
-            className="full-banner-img"
-            alt="banner_1_Alyse"
+            className="banner-section-left"
+            alt="banner_3_Alyse"
           />
           <div
-            className="full-banner-img semi-background"
+            className="banner-section-right fix-height-lg background-cover-sm"
             style={{
               backgroundImage: 'url("/images/banner_2.jpg")',
             }}
@@ -186,139 +189,147 @@ export default function Home() {
             <SubscriptionFrom />
           </div>
         </div>
-      </section>
+      </section> */}
+      <MainBannerLayout
+        bannerData={leftSection[1]}
+        heightStyle={'fix-height-lg'}
+      >
+        <SubscriptionFrom />
+      </MainBannerLayout>
 
       {/* 與我聯繫 */}
-      <section className="container">
-        <div className="contact section-spacing">
-          <h2 className="display-main-title mb-6">與我聯繫</h2>
-          <ul className="list-unstyled d-flex flex-column row-gap-6 row-gap-md-4">
-            <li className="contact-list">
-              <a
-                href="mailto:alysewang@hexschool.com"
-                className="contact-link flex-area"
-              >
-                <p className="text-slide">
-                  <span className="text-decoration-underline me-0 me-md-4">
-                    alysewang@hexschool.com
-                  </span>
-                  合作洽談
-                </p>
-                <i
-                  className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                  }}
-                ></i>
-              </a>
-            </li>
-            <li className="contact-list">
-              <a
-                href="#"
-                className="contact-link flex-area align-items-md-center"
-              >
-                <div className="icon-area text-slide">
-                  <span className="icon-square">
-                    <i className="bi bi-youtube fs-4"></i>
-                  </span>
-                  <span className="mx-2">Youtube</span>
-                  <span>職涯諮詢室</span>
-                </div>
-                <i
-                  className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                  }}
-                ></i>
-              </a>
-            </li>
-            <li className="contact-list">
-              <a
-                href="#"
-                className="contact-link flex-area align-items-md-center"
-              >
-                <div className="icon-area text-slide">
-                  <span className="icon-square">
-                    <i className="bi bi-broadcast-pin fs-4"></i>
-                  </span>
-                  <span className="mx-2">podcast</span>
-                  <span>職涯諮詢室</span>
-                </div>
-                <i
-                  className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                  }}
-                ></i>
-              </a>
-            </li>
-            <li className="contact-list">
-              <a
-                href="#"
-                className="contact-link flex-area align-items-md-center"
-              >
-                <div className="icon-area text-slide">
-                  <span className="icon-square">
-                    <i className="bi bi-facebook fs-4"></i>
-                  </span>
-                  <span className="mx-2">Facebook</span>
-                  <span>前端社群</span>
-                </div>
-                <i
-                  className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                  }}
-                ></i>
-              </a>
-            </li>
-            <li className="contact-list">
-              <a
-                href="#"
-                className="contact-link flex-area align-items-md-center"
-              >
-                <div className="icon-area text-slide">
-                  <span className="icon-square">
-                    <i className="bi bi-linkedin fs-4"></i>
-                  </span>
-                  <span className="mx-2">linkedin</span>
-                  <span>職涯交流</span>
-                </div>
-                <i
-                  className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                  }}
-                ></i>
-              </a>
-            </li>
-            <li className="contact-list">
-              <a
-                href="#"
-                className="contact-link flex-area align-items-md-center"
-              >
-                <div className="icon-area text-slide">
-                  <span className="icon-square">
-                    <i className="bi bi-instagram fs-4"></i>
-                  </span>
-                  <span className="mx-2">Instagram</span>
-                  <span>日常分享</span>
-                </div>
-                <i
-                  className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
-                  style={{
-                    width: '24px',
-                    height: '24px',
-                  }}
-                ></i>
-              </a>
-            </li>
-          </ul>
+      <section className="contact">
+        <div className="container">
+          <div className="section-spacing">
+            <h2 className="display-main-title mb-6">與我聯繫</h2>
+            <ul className="list-unstyled d-flex flex-column row-gap-6 row-gap-md-4">
+              <li className="contact-list">
+                <a
+                  href="mailto:alysewang@hexschool.com"
+                  className="contact-link flex-area"
+                >
+                  <p className="text-slide">
+                    <span className="text-decoration-underline me-0 me-md-4">
+                      alysewang@hexschool.com
+                    </span>
+                    合作洽談
+                  </p>
+                  <i
+                    className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                    }}
+                  ></i>
+                </a>
+              </li>
+              <li className="contact-list">
+                <a
+                  href="#"
+                  className="contact-link flex-area align-items-md-center"
+                >
+                  <div className="icon-area text-slide">
+                    <span className="icon-square">
+                      <i className="bi bi-youtube fs-4"></i>
+                    </span>
+                    <span className="mx-2">Youtube</span>
+                    <span>職涯諮詢室</span>
+                  </div>
+                  <i
+                    className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                    }}
+                  ></i>
+                </a>
+              </li>
+              <li className="contact-list">
+                <a
+                  href="#"
+                  className="contact-link flex-area align-items-md-center"
+                >
+                  <div className="icon-area text-slide">
+                    <span className="icon-square">
+                      <i className="bi bi-broadcast-pin fs-4"></i>
+                    </span>
+                    <span className="mx-2">podcast</span>
+                    <span>職涯諮詢室</span>
+                  </div>
+                  <i
+                    className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                    }}
+                  ></i>
+                </a>
+              </li>
+              <li className="contact-list">
+                <a
+                  href="#"
+                  className="contact-link flex-area align-items-md-center"
+                >
+                  <div className="icon-area text-slide">
+                    <span className="icon-square">
+                      <i className="bi bi-facebook fs-4"></i>
+                    </span>
+                    <span className="mx-2">Facebook</span>
+                    <span>前端社群</span>
+                  </div>
+                  <i
+                    className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                    }}
+                  ></i>
+                </a>
+              </li>
+              <li className="contact-list">
+                <a
+                  href="#"
+                  className="contact-link flex-area align-items-md-center"
+                >
+                  <div className="icon-area text-slide">
+                    <span className="icon-square">
+                      <i className="bi bi-linkedin fs-4"></i>
+                    </span>
+                    <span className="mx-2">linkedin</span>
+                    <span>職涯交流</span>
+                  </div>
+                  <i
+                    className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                    }}
+                  ></i>
+                </a>
+              </li>
+              <li className="contact-list">
+                <a
+                  href="#"
+                  className="contact-link flex-area align-items-md-center"
+                >
+                  <div className="icon-area text-slide">
+                    <span className="icon-square">
+                      <i className="bi bi-instagram fs-4"></i>
+                    </span>
+                    <span className="mx-2">Instagram</span>
+                    <span>日常分享</span>
+                  </div>
+                  <i
+                    className="bi bi-arrow-right fs-4 ms-0 ms-md-auto"
+                    style={{
+                      width: '24px',
+                      height: '24px',
+                    }}
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </div>
         </div>
       </section>
     </>

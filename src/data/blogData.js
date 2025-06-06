@@ -388,3 +388,19 @@ export const blogData = {
     },
   }
 }
+
+export const bannerImagesUrl = {
+  leftSection: [
+    {
+      title: 'banner_1',
+      url: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section.png'
+    }, {
+      title: 'banner_2',
+      url: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/mobile/index/photo9.png'
+    }
+  ],
+  rightSection: {
+    title: 'background_1',
+    url: 'https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/mobile/index/Hero%20Section2.png'
+  }
+}

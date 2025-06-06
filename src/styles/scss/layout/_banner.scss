@@ -35,6 +35,10 @@
       min-height: 180px;
     }
 
+    &.fix-height-lg {
+      min-height: 440px;
+    }
+
     @include media-breakpoint-up(md) {
       justify-content: center;
     }

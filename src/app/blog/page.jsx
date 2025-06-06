@@ -3,14 +3,18 @@ import BannerTitle from '@/components/banner/BannerTitle';
 import BlogCard from '@/components/rectCard/BlogCard';
 import BlogBannerLayout from '@/components/banner/BlogBannerLayout';
 
-import { blogData } from '@/data/blogData';
+import { blogData, bannerImagesUrl } from '@/data/blogData';
 
 export default function Blog() {
   const { latestBlogData, blogsData } = blogData;
+  const { leftSection } = bannerImagesUrl;
 
   return (
     <>
-      <MainBannerLayout hasHeightStyle={true}>
+      <MainBannerLayout
+        bannerData={leftSection[0]}
+        heightStyle={'fix-height-sm'}
+      >
         <BannerTitle mainTitle={'BLOG'} subTitle={'前端工程師 & 職涯諮詢師'} />
       </MainBannerLayout>
       <BlogBannerLayout blogData={latestBlogData} />
