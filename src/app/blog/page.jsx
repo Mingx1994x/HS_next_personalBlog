@@ -228,7 +228,7 @@ export default function Blog() {
             ))}
           </div>
           <div className="d-flex justify-content-center">
-            <ul className="pagination list-unstyled">
+            <ul className="pagination list-unstyled pill">
               <li>
                 <i className="bi bi-chevron-left fs-4"></i>
               </li>
