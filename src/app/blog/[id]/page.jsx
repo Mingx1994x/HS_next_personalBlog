@@ -2,10 +2,14 @@ import BlogBannerLayout from '@/components/banner/BlogBannerLayout';
 import BlogDetailContext from '@/components/BlogDetailContext';
 
 import { blogData } from '@/data/blogData';
+import { notFound } from 'next/navigation';
 export default async function BlogDetail({ params }) {
   const { id } = await params;
-
   const { blogsDetailData } = blogData;
+
+  if (!id || !blogsDetailData[id]) {
+    notFound();
+  }
 
   const details = {
     introduction: [
