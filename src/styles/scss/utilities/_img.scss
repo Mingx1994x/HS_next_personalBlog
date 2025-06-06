@@ -1,0 +1,9 @@
+.background-cover {
+  &-sm {
+    @include media-breakpoint-down(sm) {
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+  }
+}

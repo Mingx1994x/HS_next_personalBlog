@@ -200,7 +200,7 @@ export default function Blog() {
   ];
   return (
     <>
-      <MainBannerLayout heightStyle={'fix-height-sm'}>
+      <MainBannerLayout hasHeightStyle={true}>
         <BannerTitle mainTitle={'BLOG'} subTitle={'前端工程師 & 職涯諮詢師'} />
       </MainBannerLayout>
       <BlogBannerLayout blogData={latestBlogData} />

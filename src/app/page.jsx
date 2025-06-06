@@ -69,7 +69,7 @@ export default function Home() {
   return (
     <>
       {/* banner區塊 */}
-      <MainBannerLayout heightStyle={'fix-height-lg'}>
+      <MainBannerLayout>
         <BannerTitle
           mainTitle={'Alyse Wang'}
           subTitle={'前端工程師 & 職涯諮詢師'}

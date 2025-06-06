@@ -1,13 +1,24 @@
-export default function MainBannerLayout({ children, heightStyle }) {
+export default function MainBannerLayout({ children, hasHeightStyle = false }) {
   return (
-    <section className="d-flex flex-column flex-md-row">
-      <img src="/images/banner_1.jpg" className='full-banner-img' alt="banner_1_Alyse" />
-      <div className="position-relative" style={{
-        zIndex: 1
-      }}>
-        <img src="/images/banner_2.jpg" className={`full-banner-img ${heightStyle}`} alt="banner_2" />
-        {children}
-      </div>
-    </section>
-  )
+    <>
+      <section className="banner-section">
+        <img
+          src="https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section.png"
+          alt=""
+          className="banner-section-left"
+        />
+        <div
+          className={`banner-section-right background-cover-sm ${
+            hasHeightStyle ? 'fix-height-sm' : ''
+          }`}
+          style={{
+            backgroundImage:
+              'url("https://raw.githubusercontent.com/hexschool/2022-web-layout-training/refs/heads/main/2025-web-camp/desktop/index/Hero%20Section2.png")',
+          }}
+        >
+          {children}
+        </div>
+      </section>
+    </>
+  );
 }

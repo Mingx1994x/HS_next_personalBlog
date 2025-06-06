@@ -2,8 +2,8 @@ import SocialIcons from "@/components/SocialIcons"
 
 export default function BannerInfo() {
   return (
-    <div className="banner-content container-fluid d-flex justify-content-end">
-      <div className="sub-content">
+    <div className="banner-info-section container-fluid d-flex justify-content-end">
+      <div className="banner-info-content">
         <div className="d-flex flex-column flex-lg-row mb-4">
           <p className="text-first-row">嗨，我是<span className="mx-2">Alyse</span></p>
           <p>一名深耕前端技術的工程師。</p>
