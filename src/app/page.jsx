@@ -173,32 +173,16 @@ export default function Home() {
       </section>
 
       {/* 訂閱電子報 */}
-      {/* <section className="subscription">
-        <div className="banner-section">
-          <img
-            src="/images/banner_3.jpg"
-            className="banner-section-left"
-            alt="banner_3_Alyse"
-          />
-          <div
-            className="banner-section-right fix-height-lg background-cover-sm"
-            style={{
-              backgroundImage: 'url("/images/banner_2.jpg")',
-            }}
-          >
-            <SubscriptionFrom />
-          </div>
-        </div>
-      </section> */}
       <MainBannerLayout
         bannerData={leftSection[1]}
         heightStyle={'fix-height-lg'}
+        justifyCenterStyle={true}
       >
         <SubscriptionFrom />
       </MainBannerLayout>
 
       {/* 與我聯繫 */}
-      <section className="contact">
+      <section className="contact overflow-hidden">
         <div className="container">
           <div className="section-spacing">
             <h2 className="display-main-title mb-6">與我聯繫</h2>
